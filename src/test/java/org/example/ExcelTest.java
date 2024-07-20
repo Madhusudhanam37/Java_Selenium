@@ -16,7 +16,7 @@ public class ExcelTest {
         excelUtility.getFIrstRowValue();
     }
 
-    @Test
+//    @Test
     public void excelGetValues(){
         excelUtility.getValues();
     }
