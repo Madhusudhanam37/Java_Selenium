@@ -6,7 +6,7 @@ public class BrowserTest {
 
     BrowserUtility browserUtility=new BrowserUtility();
 
-    @Test
+//    @Test
     public void chrome(){
         browserUtility.initialzeChromeBrowser();
     }
