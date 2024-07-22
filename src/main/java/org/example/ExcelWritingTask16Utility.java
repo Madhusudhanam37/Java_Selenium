@@ -47,6 +47,12 @@ public class ExcelWritingTask16Utility {
         try (FileInputStream fis = new FileInputStream(new File(path));
              Workbook workbook = new XSSFWorkbook(fis)) {
             Sheet sheet = workbook.getSheetAt(0);
+            Row firstRow = sheet.getRow(0);
+            if (firstRow != null) {
+                for (Cell cells : firstRow) {
+                    fr.add(dataFormatter.formatCellValue(cells));
+                }
+            }
 
             for (int i = 0; i <= endRowIndex - startRowIndex; i++) {
                 Row targetRow = sheet.getRow(targetStartRowIndex + i);
